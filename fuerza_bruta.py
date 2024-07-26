@@ -7,5 +7,15 @@ import getpass
 from string import ascii_lowercase
 
 password = getpass.getpass("Ingrese la clave secreta:").lower()
+intentos = 0
 
-print(ascii_lowercase)
+for a in password:
+    for b in ascii_lowercase:
+        intentos += 1
+        if a == b:
+            break
+        
+print (f"La contraseña fue forzada en {intentos} intentos")
+        
+
+
